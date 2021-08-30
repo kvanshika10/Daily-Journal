@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+<h1>Publish your passions, your way!
+</h1>
+<p class="sub">
+  Create a unique and beautiful blog. It’s easy and free.
+
+
+  </p>
+<br>
+<u.......l>
+  <% posts.forEach(function(k){%>
+  <h3 style="color:burlywood;font-family:museo-slab,serif">
+
+<li>
+
+
+     <%= k.name %>
+</h3>
+<p style="color:cadetblue">
+  <%= k.content.substring(0,100)+".........." %><span><a href="/posts/<%= k.name%>">Read More</a></span>
+    </p>
+    </li>
+
+  <%})%>
+  </ul>
+<%- include('partials/footer.ejs') %>
